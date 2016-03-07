@@ -3,25 +3,46 @@
 using namespace std;
 
 int ArraySum(int s)
+
 { int *a;
+
   int sum=0;
+
   a=new int[s];
+ 
   ifstream in("data.txt");
-  if(!in)      //´ò¿ª²»³É¹¦
-{ cout<<"ÎÄ¼þ´ò¿ªÊ§°Ü\n";
+  
+  if(!in)      //æ‰“å¼€ä¸æˆåŠŸ
+
+{ cout<<"æ–‡ä»¶æ‰“å¼€å¤±è´¥\n";
+
 	   return 0;}
+ 
   for(int i=0;in>>a[i],i<s;i++)
+
   sum+=a[i];
+ 
   in.close();
+
   return sum;
+
 }
 
+
 int main(void)
+
 {  int s;
+  
    int Sum;
-   cout<<"ÇëÊäÈëÊý×éµÄ³¤¶È:";
+ 
+   cout<<"è¯·è¾“å…¥æ•°ç»„çš„é•¿åº¦:";
+ 
    cin>>s;
+ 
    Sum=ArraySum(s);
-   cout<<"ºÍÎª:"<<Sum;
+  
+   cout<<"å’Œä¸º:"<<Sum;
+  
    return 0;
+
 }
