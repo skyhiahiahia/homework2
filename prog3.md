@@ -1,31 +1,56 @@
 #include<iostream>
+
 #include<fstream>
+
 using namespace std;
 
 int ArraySum(int s,int min,int max)
+
 { int *a;
+ 
   int sum=0;
+  
   a=new int[s];
+ 
   ifstream in("data.txt");
-  if(!in)      //´ò¿ª²»³É¹¦
-{  cout<<"ÎÄ¼þ´ò¿ªÊ§°Ü\n";
+ 
+  if(!in)      //æ‰“å¼€ä¸æˆåŠŸ
+
+{  cout<<"æ–‡ä»¶æ‰“å¼€å¤±è´¥\n";
+
 	   return 0;}
-  for(int i=min;in>>a[i],i<max;i++)
+  
+  for(int i=min;in>>a[i],i<=max;i++)
+ 
   sum+=a[i];
+ 
   in.close();
+
   return sum;
+
 }
 
 int main(void)
+
 {  int s,min,max;
+ 
    int Sum;
-   cout<<"ÇëÊäÈëÊý×éµÄ³¤¶È:";
+  
+   cout<<"è¯·è¾“å…¥æ•°ç»„çš„é•¿åº¦:";
+   
    cin>>s;
-   cout<<"Çë·¶Î§µÄÏÂÏÞ:";
+   cout<<"è¯·è¾“å…¥è®¡ç®—èŒƒå›´çš„ä¸‹é™:";
+ 
    cin>>min;
-   cout<<"ÇëÊäÈë·¶Î§µÄÉÏÏÞ:";
+ 
+   cout<<"è¯·è¾“å…¥è®¡ç®—èŒƒå›´çš„ä¸Šé™:";
+   
    cin>>max;
+   
    Sum=ArraySum(s,min,max);
-   cout<<"Êý×éµÄºÍÎª:"<<Sum;
+   
+   cout<<"æ•°ç»„çš„å’Œä¸º:"<<Sum;
+  
    return 0;
+
 }
