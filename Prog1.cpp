@@ -9,6 +9,6 @@ int main(void)
   int sum=0;
   for(int i=0;i<100;i++)
 	  sum+=a[i];
-  cout<<"数组的和为:"<<sum;
+  cout<<"鍜屼负:"<<sum;
   return 0;
 }
